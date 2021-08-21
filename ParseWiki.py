@@ -9,8 +9,7 @@ res = ""
 for i in wiki_random:
     try:
         p = wikipedia.page(i)
-        text = p.content
-        res += text
+        res += p.content
 
     except wikipedia.exceptions.DisambiguationError as e:
         print(e.options)
